@@ -142,7 +142,7 @@ int main()
     int seat_num;
     do
     {
-        printf("\n============================================= BUS RESERVATION SYSTEM =============================================\n\n");
+        printf("\n\t\t\tBUS RESERVATION SYSTEM\t\t\t\n\n");
         printf("\tMENU\n");
         printf("\t1. Display all buses\n");
         printf("\t2. Check seat availability\n");
@@ -189,7 +189,7 @@ void login()
     {
         system("cls");
 
-        printf("\n  =========================  LOGIN FORM  =========================  ");
+        printf("\n  \t\t\t  LOGIN FORM  \t\t\t  \n");
         printf(" \n                       ENTER USERNAME:-");
         scanf("%s", &uname);
         printf(" \n                       ENTER PASSWORD:-");
