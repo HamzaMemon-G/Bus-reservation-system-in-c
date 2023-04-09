@@ -189,10 +189,10 @@ void login()
     {
         system("cls");
 
-        printf("\n  \t\t\t  LOGIN FORM  \t\t\t  \n");
-        printf(" \n                       ENTER USERNAME:-");
+        printf("\n  \t\t\t  LOGIN  \t\t\t  \n");
+        printf(" \nENTER USERNAME:-");
         scanf("%s", &uname);
-        printf(" \n                       ENTER PASSWORD:-");
+        printf(" \nENTER PASSWORD:-");
         while (i < 10)
         {
             pword[i] = getch();
@@ -207,8 +207,9 @@ void login()
         i = 0;
         if (strcmp(uname, "Hamza") == 0 && strcmp(pword, "Pass") == 0)
         {
-            printf("  \n\n\n       WELCOME TO OUR SYSTEM !!!! LOGIN IS SUCCESSFUL");
-            printf("\n\n\n\t\t\t\tPress any key to continue...");
+            printf("\nLogin successful");
+            printf("  \n\n\nWelcome to Bus Reseravtion system");
+            printf("\n\n\nPress any key to continue...");
             getch();
             break;
         }
