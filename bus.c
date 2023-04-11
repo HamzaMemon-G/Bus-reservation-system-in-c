@@ -60,7 +60,7 @@ void reserve_seat(char bus_num[], int seat_num)
             if (buses[i].seats[seat_num - 1] == 0)
             {
                 buses[i].seats[seat_num - 1] = 1;
-                printf("Seat %d reserved on bus %s", seat_num, bus_num);
+                printf("Seat %d reserved on bus %s\n", seat_num, bus_num);
             }
             else
             {
@@ -215,7 +215,7 @@ void login()
         }
         else
         {
-            printf("\n        SORRY !!!!  LOGIN IS UNSUCESSFUL");
+            printf("\nLOGIN IS UNSUCESSFUL");
             a++;
 
             getch();
