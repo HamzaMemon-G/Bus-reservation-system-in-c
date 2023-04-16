@@ -1,6 +1,59 @@
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
+#include <stdlib.h>
+
+void login()
+{
+    int a = 0, i = 0;
+    char uname[10], c = ' ';
+    char pword[10], code[10];
+    char user[10] = "user";
+    char pass[10] = "pass";
+    do
+    {
+        system("cls");
+
+        printf("\n  \t\t\t  LOGIN  \t\t\t  \n");
+        printf(" \nENTER USERNAME:-");
+        scanf("%s", &uname);
+        printf(" \nENTER PASSWORD:-");
+        while (i < 10)
+        {
+            pword[i] = getch();
+            c = pword[i];
+            if (c == 13)
+                break;
+            else
+                printf("*");
+            i++;
+        }
+        pword[i] = '\0';
+        i = 0;
+        if (strcmp(uname, "Hamza") == 0 && strcmp(pword, "Pass") == 0)
+        {
+            printf("\nLogin successful");
+            printf("  \n\n\nWelcome to Bus Reseravtion system");
+            printf("\n\n\nPress any key to continue...");
+            getch();
+            break;
+        }
+        else
+        {
+            printf("\nLOGIN IS UNSUCESSFUL");
+            a++;
+
+            getch();
+        }
+    } while (a <= 2);
+    if (a > 2)
+    {
+        printf("\nSorry you have entered the wrong username and password for four times!!!");
+
+        getch();
+    }
+    system("cls");
+}
 
 struct Bus
 {
@@ -177,55 +230,4 @@ int main()
     } while (choice != 4);
 
     return 0;
-}
-void login()
-{
-    int a = 0, i = 0;
-    char uname[10], c = ' ';
-    char pword[10], code[10];
-    char user[10] = "user";
-    char pass[10] = "pass";
-    do
-    {
-        system("cls");
-
-        printf("\n  \t\t\t  LOGIN  \t\t\t  \n");
-        printf(" \nENTER USERNAME:-");
-        scanf("%s", &uname);
-        printf(" \nENTER PASSWORD:-");
-        while (i < 10)
-        {
-            pword[i] = getch();
-            c = pword[i];
-            if (c == 13)
-                break;
-            else
-                printf("*");
-            i++;
-        }
-        pword[i] = '\0';
-        i = 0;
-        if (strcmp(uname, "Hamza") == 0 && strcmp(pword, "Pass") == 0)
-        {
-            printf("\nLogin successful");
-            printf("  \n\n\nWelcome to Bus Reseravtion system");
-            printf("\n\n\nPress any key to continue...");
-            getch();
-            break;
-        }
-        else
-        {
-            printf("\nLOGIN IS UNSUCESSFUL");
-            a++;
-
-            getch();
-        }
-    } while (a <= 2);
-    if (a > 2)
-    {
-        printf("\nSorry you have entered the wrong username and password for four times!!!");
-
-        getch();
-    }
-    system("cls");
 }
