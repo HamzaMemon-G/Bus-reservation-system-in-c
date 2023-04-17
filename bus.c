@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-#include <conio.h>
 #include <stdlib.h>
+#include <conio.h>
 
 void login()
 {
@@ -48,8 +48,8 @@ void login()
     } while (a <= 2);
     if (a > 2)
     {
-        printf("\nSorry you have entered the wrong username and password for four times!!!");
-
+        printf("\nSorry you have entered the wrong username and password for three times!!!");
+        
         getch();
     }
     system("cls");
